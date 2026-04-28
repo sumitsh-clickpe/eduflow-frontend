@@ -85,6 +85,8 @@ const Checkout = () => {
             </div>
           </section>
 
+          <BillingAddressForm value={billing} onChange={setBilling} />
+
           <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="font-display font-semibold text-lg flex items-center gap-2"><CreditCard className="w-5 h-5" /> Payment</h2>
@@ -102,10 +104,6 @@ const Checkout = () => {
               <div className="space-y-1.5">
                 <Label htmlFor="cvc">CVC</Label>
                 <Input id="cvc" required placeholder="123" />
-              </div>
-              <div className="space-y-1.5">
-                <Label htmlFor="zip">ZIP</Label>
-                <Input id="zip" required placeholder="10001" />
               </div>
             </div>
             <p className="text-xs text-muted-foreground">Demo only — no real charge will be made.</p>
