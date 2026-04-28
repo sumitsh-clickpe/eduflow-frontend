@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, CreditCard, Lock, ShoppingBag } from "lucide-react";
 import { EmptyState } from "@/components/common/EmptyState";
 import { toast } from "sonner";
+import { BillingAddressForm, emptyBillingAddress } from "@/components/checkout/BillingAddressForm";
 
 const Checkout = () => {
   const { items, total, clear } = useCart();
@@ -17,6 +18,7 @@ const Checkout = () => {
   const navigate = useNavigate();
   const [done, setDone] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [billing, setBilling] = useState(emptyBillingAddress);
 
   if (items.length === 0 && !done) {
     return (
@@ -33,6 +35,10 @@ const Checkout = () => {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!billing.state) {
+      toast.error("Please select your state");
+      return;
+    }
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
@@ -79,6 +85,8 @@ const Checkout = () => {
             </div>
           </section>
 
+          <BillingAddressForm value={billing} onChange={setBilling} />
+
           <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="font-display font-semibold text-lg flex items-center gap-2"><CreditCard className="w-5 h-5" /> Payment</h2>
@@ -96,10 +104,6 @@ const Checkout = () => {
               <div className="space-y-1.5">
                 <Label htmlFor="cvc">CVC</Label>
                 <Input id="cvc" required placeholder="123" />
-              </div>
-              <div className="space-y-1.5">
-                <Label htmlFor="zip">ZIP</Label>
-                <Input id="zip" required placeholder="10001" />
               </div>
             </div>
             <p className="text-xs text-muted-foreground">Demo only — no real charge will be made.</p>
