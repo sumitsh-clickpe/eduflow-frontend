@@ -21,7 +21,7 @@ const categories = [
 ];
 
 const testimonials = [
-  { name: "Maya Hernandez", role: "Software Engineer @ Vercel", quote: "Lumen courses are the only ones I've taken where I actually shipped something I'm proud of. The instructors care.", img: "https://i.pravatar.cc/100?img=24" },
+  { name: "Maya Hernandez", role: "Software Engineer @ Vercel", quote: "MargCred courses are the only ones I've taken where I actually shipped something I'm proud of. The instructors care.", img: "https://i.pravatar.cc/100?img=24" },
   { name: "David Park", role: "Product Designer @ Linear", quote: "The pacing, the projects, the polish — it all feels like a premium product. I learn something new every week.", img: "https://i.pravatar.cc/100?img=11" },
   { name: "Priya Anand", role: "Founder @ Stitch.ai", quote: "I built and launched my startup using skills I learned here. Hands down the best return on time of any platform.", img: "https://i.pravatar.cc/100?img=45" },
 ];

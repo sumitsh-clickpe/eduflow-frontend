@@ -53,9 +53,9 @@ export function FilterSidebar({ filters, onChange, onReset }: {
         </div>
         <Slider
           value={[filters.maxPrice]}
-          min={20}
-          max={120}
-          step={5}
+          min={10000}
+          max={20000}
+          step={500}
           onValueChange={(v) => onChange({ ...filters, maxPrice: v[0] })}
         />
       </div>

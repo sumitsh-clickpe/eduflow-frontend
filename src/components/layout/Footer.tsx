@@ -10,7 +10,7 @@ export function Footer() {
             <div className="w-9 h-9 rounded-xl bg-gradient-violet flex items-center justify-center shadow-glow">
               <GraduationCap className="w-5 h-5 text-primary-foreground" />
             </div>
-            Lumen<span className="text-gradient">.</span>
+            MargCred<span className="text-gradient">.</span>
           </Link>
           <p className="text-sm text-muted-foreground max-w-xs mb-6">
             Learn from the world's best practitioners. Build skills that compound.
@@ -24,16 +24,16 @@ export function Footer() {
           </div>
         </div>
         {[
-          { title: "Learn", links: ["Browse courses", "Categories", "Free lessons", "Roadmaps"] },
-          { title: "Company", links: ["About", "Careers", "Press", "Blog"] },
-          { title: "Support", links: ["Help center", "Contact", "Privacy", "Terms"] },
+          { title: "Learn", links: [{ label: "Browse courses", to: "/courses" }, { label: "Categories", to: "/courses" }, { label: "Free lessons", to: "/courses" }, { label: "Roadmaps", to: "/courses" }] },
+          { title: "Company", links: [{ label: "About", to: "#" }, { label: "Careers", to: "#" }, { label: "Press", to: "#" }, { label: "Blog", to: "#" }] },
+          { title: "Legal", links: [{ label: "Privacy Policy", to: "/privacy-policy" }, { label: "Terms & Conditions", to: "/terms" }, { label: "Refund Policy", to: "/refund-policy" }, { label: "Contact", to: "#" }] },
         ].map((col) => (
           <div key={col.title}>
             <h4 className="font-display font-semibold mb-4 text-sm">{col.title}</h4>
             <ul className="space-y-2.5">
               {col.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">{l}</a>
+                <li key={l.label}>
+                  <Link to={l.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -42,7 +42,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
-          <div>© 2026 Lumen Learning. Crafted for curious minds.</div>
+          <div>© 2026 MargCred Learning. Crafted for curious minds.</div>
           <div>All rights reserved.</div>
         </div>
       </div>

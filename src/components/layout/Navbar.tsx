@@ -53,7 +53,7 @@ export function Navbar() {
           <div className="w-9 h-9 rounded-xl bg-gradient-violet flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform">
             <GraduationCap className="w-5 h-5 text-primary-foreground" />
           </div>
-          <span className="hidden sm:inline">Lumen<span className="text-gradient">.</span></span>
+          <span className="hidden sm:inline">MargCred<span className="text-gradient">.</span></span>
         </Link>
 
         <form onSubmit={onSearch} className="flex-1 max-w-md hidden md:block">

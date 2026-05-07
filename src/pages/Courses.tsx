@@ -10,7 +10,7 @@ import { EmptyState } from "@/components/common/EmptyState";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-const defaultFilters: Filters = { categories: [], maxPrice: 120, minRating: 0 };
+const defaultFilters: Filters = { categories: [], maxPrice: 20000, minRating: 0 };
 
 const Courses = () => {
   const [params, setParams] = useSearchParams();
