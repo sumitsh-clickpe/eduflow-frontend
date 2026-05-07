@@ -10,7 +10,7 @@ export function Footer() {
             <div className="w-9 h-9 rounded-xl bg-gradient-violet flex items-center justify-center shadow-glow">
               <GraduationCap className="w-5 h-5 text-primary-foreground" />
             </div>
-            Lumen<span className="text-gradient">.</span>
+            MargCred<span className="text-gradient">.</span>
           </Link>
           <p className="text-sm text-muted-foreground max-w-xs mb-6">
             Learn from the world's best practitioners. Build skills that compound.
@@ -42,7 +42,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
-          <div>© 2026 Lumen Learning. Crafted for curious minds.</div>
+          <div>© 2026 MargCred Learning. Crafted for curious minds.</div>
           <div>All rights reserved.</div>
         </div>
       </div>

@@ -55,7 +55,7 @@ const Login = () => {
           </div>
           <Button type="submit" variant="hero" size="lg" className="w-full">Log in</Button>
           <p className="text-sm text-center text-muted-foreground">
-            New to Lumen? <Link to="/signup" className="text-primary font-medium hover:underline">Create an account</Link>
+            New to MargCred? <Link to="/signup" className="text-primary font-medium hover:underline">Create an account</Link>
           </p>
           <p className="text-xs text-center text-muted-foreground">Demo: any email & password works.</p>
         </motion.form>
