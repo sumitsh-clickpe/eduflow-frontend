@@ -24,16 +24,16 @@ export function Footer() {
           </div>
         </div>
         {[
-          { title: "Learn", links: ["Browse courses", "Categories", "Free lessons", "Roadmaps"] },
-          { title: "Company", links: ["About", "Careers", "Press", "Blog"] },
-          { title: "Support", links: ["Help center", "Contact", "Privacy", "Terms"] },
+          { title: "Learn", links: [{ label: "Browse courses", to: "/courses" }, { label: "Categories", to: "/courses" }, { label: "Free lessons", to: "/courses" }, { label: "Roadmaps", to: "/courses" }] },
+          { title: "Company", links: [{ label: "About", to: "#" }, { label: "Careers", to: "#" }, { label: "Press", to: "#" }, { label: "Blog", to: "#" }] },
+          { title: "Legal", links: [{ label: "Privacy Policy", to: "/privacy-policy" }, { label: "Terms & Conditions", to: "/terms" }, { label: "Refund Policy", to: "/refund-policy" }, { label: "Contact", to: "#" }] },
         ].map((col) => (
           <div key={col.title}>
             <h4 className="font-display font-semibold mb-4 text-sm">{col.title}</h4>
             <ul className="space-y-2.5">
               {col.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">{l}</a>
+                <li key={l.label}>
+                  <Link to={l.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">{l.label}</Link>
                 </li>
               ))}
             </ul>
