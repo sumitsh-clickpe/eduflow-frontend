@@ -13,6 +13,9 @@ import Checkout from "./pages/Checkout.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import Login from "./pages/Login.tsx";
 import Signup from "./pages/Signup.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import RefundPolicy from "./pages/RefundPolicy.tsx";
+import TermsAndConditions from "./pages/TermsAndConditions.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -34,6 +37,9 @@ const App = () => (
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/refund-policy" element={<RefundPolicy />} />
+              <Route path="/terms" element={<TermsAndConditions />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
